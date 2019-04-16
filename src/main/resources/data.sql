@@ -1,60 +1,59 @@
---Заполнение справочников
---Страна
-insert into Country (code, name) values ('643', 'Россия');
+--Р—Р°РїРѕР»РЅРµРЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ
+--РЎС‚СЂР°РЅР°
+insert into Country (code, name) values ('643', 'Р РѕСЃСЃРёСЏ');
 
--- Типы документов
+-- РўРёРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ
 insert into Doc_Type (code, name)
-values ('21', 'Паспорт гражданина Российской Федерации', );
+values ('21', 'РџР°СЃРїРѕСЂС‚ РіСЂР°Р¶РґР°РЅРёРЅР° Р РѕСЃСЃРёР№СЃРєРѕР№ Р¤РµРґРµСЂР°С†РёРё', );
 
 insert into Doc_Type (code, name)
-values ('10', 'Паспорт иностранного гражданина');
- --Заполнение справочников end
+values ('10', 'РџР°СЃРїРѕСЂС‚ РёРЅРѕСЃС‚СЂР°РЅРЅРѕРіРѕ РіСЂР°Р¶РґР°РЅРёРЅР°');
+--Р—Р°РїРѕР»РЅРµРЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ end
 
---Организация
+--РћСЂРіР°РЅРёР·Р°С†РёСЏ
 insert into Organisation (name, full_name, inn, kpp, is_active, version)
-values ('НаименованиеОрганизации1', 'Полное Наименование Организации 1', '123456789', '1123456789', 1, 0);
+values ('РќР°РёРјРµРЅРѕРІР°РЅРёРµРћСЂРіР°РЅРёР·Р°С†РёРё1', 'РџРѕР»РЅРѕРµ РќР°РёРјРµРЅРѕРІР°РЅРёРµ РћСЂРіР°РЅРёР·Р°С†РёРё 1', '123456789', '1123456789', 1, 0);
 
 insert into Organisation (name, full_name, inn, kpp, is_active, version)
-values ('НаименованиеОрганизации2', 'Полное Наименование Организации 2', '223456789', '2123456789', 1, 0);
+values ('РќР°РёРјРµРЅРѕРІР°РЅРёРµРћСЂРіР°РЅРёР·Р°С†РёРё2', 'РџРѕР»РЅРѕРµ РќР°РёРјРµРЅРѕРІР°РЅРёРµ РћСЂРіР°РЅРёР·Р°С†РёРё 2', '223456789', '2123456789', 1, 0);
 
--- офис
+-- РѕС„РёСЃ
 insert into Office (org_id, address, phone, is_active, version)
-values (1, 'Адрес офиса 1 орнанизации 1', '+11 123 1234567', 1, 0);
-
-insert into Office (org_id, address, phone, is_active, version)
-values (1, 'Адрес офиса 2 орнанизации 1', '+12 123 1234567', 1, 0);
+values (1, 'РђРґСЂРµСЃ РѕС„РёСЃР° 1 РѕСЂРЅР°РЅРёР·Р°С†РёРё 1', '+11 123 1234567', 1, 0);
 
 insert into Office (org_id, address, phone, is_active, version)
-values (2, 'Адрес офиса 1 орнанизации 2', '+21 123 1234567', 1, 0);
+values (1, 'РђРґСЂРµСЃ РѕС„РёСЃР° 2 РѕСЂРЅР°РЅРёР·Р°С†РёРё 1', '+12 123 1234567', 1, 0);
+
+insert into Office (org_id, address, phone, is_active, version)
+values (2, 'РђРґСЂРµСЃ РѕС„РёСЃР° 1 РѕСЂРЅР°РЅРёР·Р°С†РёРё 2', '+21 123 1234567', 1, 0);
 
 
--- Клиент
+-- РљР»РёРµРЅС‚
 insert into User ( first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
-values('Имя1', 'Фамилия1', 'Отчество1', 'Должность1', '+11 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент1', 0);
-
-insert into User ( first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
-values('Имя2', 'Фамилия2', 'Отчество2', 'Должность2', '+22 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент2', 0);
-
-insert into User ( first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
-values('Имя3', 'Фамилия3', 'Отчество3', 'Должность3', '+32 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент3', 0);
-
+values('РРјСЏ1', 'Р¤Р°РјРёР»РёСЏ1', 'РћС‚С‡РµСЃС‚РІРѕ1', 'Р”РѕР»Р¶РЅРѕСЃС‚СЊ1', '+11 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'РРґРµРЅС‚1', 0);
 
 insert into User ( first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
-values('Имя4', 'Фамилия4', 'Отчество4', 'Должность4', '+43 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент4', 0);
+values('РРјСЏ2', 'Р¤Р°РјРёР»РёСЏ2', 'РћС‚С‡РµСЃС‚РІРѕ2', 'Р”РѕР»Р¶РЅРѕСЃС‚СЊ2', '+22 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'РРґРµРЅС‚2', 0);
+
+insert into User ( first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
+values('РРјСЏ3', 'Р¤Р°РјРёР»РёСЏ3', 'РћС‚С‡РµСЃС‚РІРѕ3', 'Р”РѕР»Р¶РЅРѕСЃС‚СЊ3', '+32 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'РРґРµРЅС‚3', 0);
 
 
-insert into user_office(user_id, office_id, version) 
+insert into User ( first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
+values('РРјСЏ4', 'Р¤Р°РјРёР»РёСЏ4', 'РћС‚С‡РµСЃС‚РІРѕ4', 'Р”РѕР»Р¶РЅРѕСЃС‚СЊ4', '+43 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'РРґРµРЅС‚4', 0);
+
+
+insert into user_office(user_id, office_id, version)
 values(1, 1, 0);
 
-insert into user_office(user_id, office_id, version) 
+insert into user_office(user_id, office_id, version)
 values(1, 2, 0);
 
-insert into user_office(user_id, office_id, version) 
+insert into user_office(user_id, office_id, version)
 values(2, 2, 0);
 
-insert into user_office(user_id, office_id, version) 
+insert into user_office(user_id, office_id, version)
 values(3, 3, 0);
 
-insert into user_office(user_id, office_id, version) 
-values(4, 3, 0);
-
+insert into user_office(user_id, office_id, version)
+values(4, 3, 0); 
