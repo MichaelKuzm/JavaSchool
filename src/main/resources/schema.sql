@@ -28,7 +28,6 @@ ALTER TABLE Office ADD FOREIGN KEY (org_id) REFERENCES Organisation(id);
 
 CREATE TABLE IF NOT EXISTS User (
     id               integer                  COMMENT 'Уникальный идентификатор ' PRIMARY KEY AUTO_INCREMENT,
-    office_id        integer                  COMMENT 'Id Office', 
     first_name       varchar(50)     NOT NULL COMMENT 'Имя клиента',
     second_name      varchar(50)     NOT NULL COMMENT 'Фамилия  клиента',
     middle_name      varchar(50)     NOT NULL COMMENT 'Отчество клиента',
@@ -42,6 +41,15 @@ CREATE TABLE IF NOT EXISTS User (
     version          integer         NOT NULL COMMENT 'Служебное поле hibernate'
 );
 COMMENT ON TABLE User IS 'Клиент';
+
+CREATE TABLE IF NOT EXISTS user_office (
+    user_id    integer       NOT NULL COMMENT 'Id клиента',
+    office_id  integer       NOT NULL COMMENT 'Id Office',
+    version    integer       NOT NULL COMMENT 'Служебное поле hibernate',
+);
+COMMENT ON TABLE user_office IS 'Таблица для связи многие ко многим';
+
+CREATE PRIMARY KEY IF NOT EXISTS PK_user_office ON user_office (user_id, office_id);
 
 
 CREATE TABLE IF NOT EXISTS Doc_Type (

@@ -29,17 +29,32 @@ values (2, 'Адрес офиса 1 орнанизации 2', '+21 123 1234567', 1, 0);
 
 
 -- Клиент
-insert into User (office_id, first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
-values(1, 'Имя1', 'Фамилия1', 'Отчество1', 'Должность1', '+11 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент1', 0);
+insert into User ( first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
+values('Имя1', 'Фамилия1', 'Отчество1', 'Должность1', '+11 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент1', 0);
 
-insert into User (office_id, first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
-values(2, 'Имя2', 'Фамилия2', 'Отчество2', 'Должность2', '+22 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент2', 0);
+insert into User ( first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
+values('Имя2', 'Фамилия2', 'Отчество2', 'Должность2', '+22 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент2', 0);
 
-insert into User (office_id, first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
-values(2, 'Имя3', 'Фамилия3', 'Отчество3', 'Должность3', '+32 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент3', 0);
+insert into User ( first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
+values('Имя3', 'Фамилия3', 'Отчество3', 'Должность3', '+32 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент3', 0);
 
 
-insert into User (office_id, first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
-values(3, 'Имя3', 'Фамилия4', 'Отчество4', 'Должность4', '+43 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент4', 0);
+insert into User ( first_name, second_name, middle_name, position, phone, doc_id, doc_number, doc_date, country_id, is_identified, version)
+values('Имя4', 'Фамилия4', 'Отчество4', 'Должность4', '+43 495 1234567', 1, '1234 123456', '2001-03-03', 1, 'Идент4', 0);
 
+
+insert into user_office(user_id, office_id, version) 
+values(1, 1, 0);
+
+insert into user_office(user_id, office_id, version) 
+values(1, 2, 0);
+
+insert into user_office(user_id, office_id, version) 
+values(2, 2, 0);
+
+insert into user_office(user_id, office_id, version) 
+values(3, 3, 0);
+
+insert into user_office(user_id, office_id, version) 
+values(4, 3, 0);
 
